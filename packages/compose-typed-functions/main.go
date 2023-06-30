@@ -12,10 +12,9 @@ type Server struct {
 	fileNameTransformFunc TransFormFunc
 }
 
-func (s *Server) handleRequest(filename string) error {
+func (s *Server) handleRequest(filename string) {
 	newFileName := s.fileNameTransformFunc(filename)
 	fmt.Println("new filename: ", newFileName)
-	return nil
 }
 
 // sha1
